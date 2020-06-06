@@ -1,0 +1,13 @@
+version: '3'
+services:
+  keycloak:
+    container_name: kc_dev
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: Pa55w0rd
+      KEYCLOAK_IMPORT: /tmp/heartspark_realm.json
+    volumes:
+    - "./src/test/resources/heartspark_realm.json:/tmp/heartspark_realm.json"
+    ports:
+      - 8180:8080

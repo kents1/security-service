@@ -1,0 +1,1 @@
+docker exec -it kc_dev /opt/jboss/keycloak/bin/standalone.sh -Djboss.socket.binding.port-offset=105 -Dkeycloak.migration.action=export -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.realmName=heartspark -Dkeycloak.migration.usersExportStrategy=REALM_FILE -Dkeycloak.migration.file=/tmp/heartspark_realm.json
