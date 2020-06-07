@@ -8,6 +8,6 @@ services:
       KEYCLOAK_PASSWORD: Pa55w0rd
       KEYCLOAK_IMPORT: /tmp/heartspark_realm.json
     volumes:
-    - "./src/test/resources/heartspark_realm.json:/tmp/heartspark_realm.json"
+    - "./heartspark_realm.json:/tmp/heartspark_realm.json"
     ports:
       - 8180:8080
